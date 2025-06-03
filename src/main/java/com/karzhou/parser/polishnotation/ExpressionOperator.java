@@ -25,16 +25,13 @@ public enum ExpressionOperator {
         this.rate = rate;
         this.value = value;
     }
-    public static ExpressionOperator getExpressionOperator(String value){
-        List<ExpressionOperator> operators = new ArrayList<>(Arrays.asList(ExpressionOperator.values()));
-
-        for(ExpressionOperator operator : operators){
-            if(operator.getValue().equals(value)){
+    public static ExpressionOperator getExpressionOperator(String value) {
+        for (ExpressionOperator operator : ExpressionOperator.values()) {
+            if (operator.getValue().equals(value)) {
                 return operator;
             }
         }
-
-        return null;
+        throw new IllegalArgumentException("Unknown operator: " + value);
     }
 
 }

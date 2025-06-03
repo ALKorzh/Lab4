@@ -13,7 +13,6 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class ExpressionConverter{
-    // search all number expressions
     private static final String NUMBER_EXPRESSION_REGEX = "\\p{Punct}*\\d[\\p{Punct}\\d]+";
     private static final Logger LOGGER = LogManager.getLogger(ExpressionConverter.class);
 
